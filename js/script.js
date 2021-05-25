@@ -13,26 +13,40 @@ var generatePassword = function() {
   }
   getPasswordLength();
 
-  var allowLowercase = window.confirm("Can your password contain lowercase characters?");
-  var allowUppercase = window.confirm("Can your password contain uppercase characters?");
-  var allowNumericChar = window.confirm("Can your password contain numbers?");
-  var allowSpecialChar = window.confirm("Can your password contain special characters?");
+  var allowLowercase;
+  var allowUppercase;
+  var allowNumericChar;
+  var allowSpecialChar;
 
-  var randomNumber = function(max, min) {
+  var confirmCharOptions = function() {
+    allowLowercase = window.confirm("Can your password contain lowercase characters?");
+    allowUppercase = window.confirm("Can your password contain uppercase characters?");
+    allowNumericChar = window.confirm("Can your password contain numbers?");
+    allowSpecialChar = window.confirm("Can your password contain special characters?");
+
+    if (!allowLowercase && !allowUppercase && !allowNumericChar && !allowSpecialChar) {
+      alert("Please selet at least one character type.");
+      return confirmCharOptions();
+    }
+  }
+
+  confirmCharOptions();
+
+  var randomNumber = function(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
   
   //create function for each character option
   var getLowerChar = function() {
     if (allowLowercase) {
-      var lowerCaseChar = String.fromCharCode([randomNumber(122, 97)]);
+      var lowerCaseChar = String.fromCharCode([randomNumber(97, 122)]);
       newPassword.push(lowerCaseChar);
     }
   }
   
   var getUpperChar = function() {
     if (allowUppercase) {
-      var upperCaseChar = String.fromCharCode([randomNumber(90, 65)]);
+      var upperCaseChar = String.fromCharCode([randomNumber(65, 90)]);
       newPassword.push(upperCaseChar);
     }
   }
@@ -47,7 +61,7 @@ var generatePassword = function() {
   var getSpecialChar = function() {
     if (allowSpecialChar) {
       var specialCharacters = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
-      var specialChar = specialCharacters[randomNumber(27, 0)];
+      var specialChar = specialCharacters[randomNumber(0, specialCharacters.length)];
       newPassword.push(specialChar);
     }
   }
@@ -58,7 +72,7 @@ var generatePassword = function() {
   getSpecialChar();
 
   while (newPassword.length < passwordLength) {
-    switch(randomNumber(4,1)) {
+    switch(randomNumber(1, 4)) {
       case 1:
         getLowerChar();
         break;
