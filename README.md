@@ -26,4 +26,5 @@ View the Password Generator here: https://emholmes.github.io/eholmes-password-ge
 ![Screenshot of password uppercase chars prompt](./assets/images/password-gen-upperchars.png)
 ![Screenshot of password numeric chars prompt](./assets/images/password-gen-numchars.png)
 ![Screenshot of password special chars prompt](./assets/images/password-gen-specialchars.png)
+![Screenshot showing error message if no character types are okayed](./assets/images/password-gen-charerror.png)
 ![Screenshot of final screen with password](./assets/images/password-gen-finalscreen.png)
