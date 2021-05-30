@@ -77,10 +77,13 @@ var generatePassword = function() {
   // initialize newPasswordArray as empty array
   var newPasswordArray = [];
 
+  // get password length
   var passwordLength = getPasswordLength();
 
+  // get character options object
   var charOptions = confirmCharOptions();
 
+  // push one of each charactered allowed to the newPasswordArray
   if (charOptions.allowLowercase) {
     newPasswordArray.push(getLowerChar());
   }
@@ -127,7 +130,7 @@ var generatePassword = function() {
         break;
     };
   }
-
+  // shuffle password so first 4 characters are in random order
   shufflePassword(newPasswordArray);
 
   // join shuffled password array into string & return
