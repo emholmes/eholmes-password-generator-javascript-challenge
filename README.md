@@ -12,7 +12,7 @@ Clicking the "Generate Password" button, will prompt the user with the following
 
 ** You must select at least one character type to generate a password.
 
-Once all prompts are answered, the generatePassword function will randomly select one of each allowed character and push each into an array, and then randomly pick the remaining characters, pushing those into the array as well. 
+The generatePassword function will randomly select one of each allowed character and push each into an array. The remaining characters are randomly selected and pushed into the array as well. <br>
 After all characters are selected, the array will be shuffled and displayed on the screen as a string. 
 
 Use this password generator to create as many passwords as you need. This password generator does not save previously generated passwords. 
