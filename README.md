@@ -4,7 +4,7 @@ This repository contains the code necessary to run a password generator.
 
 Clicking the "Generate Password" button, will prompt the user with the following questions: 
 1. How many characters would you like your password to be? 
-This number must be between 8 and 128, inclusive. 
+<br>This number must be between 8 and 128, inclusive. 
 2. Can your password contain lowercase characters?
 3. Can your password contain uppercase characters?
 4. Can your password contain numeric characters?
@@ -15,7 +15,7 @@ This number must be between 8 and 128, inclusive.
 Once all prompts are answered, the generatePassword function will push one of each allowed character to an array, and then randomly pick the remaining characters. 
 After all characters are selected, the array will be shuffled and displayed on the screen. 
 
-Use this password generator to create as many passwords as you need. 
+Use this password generator to create as many passwords as you need. This password generator does not save previously generated passwords. 
 
 View the Password Generator here: https://emholmes.github.io/eholmes-password-generator-javascript-challenge/ (deployed application)
 
