@@ -1,6 +1,6 @@
 # Javascript Challenge: Password Generator
 
-This repository contains the code necessary to run a password generator. 
+This repository contains the code necessary to run a password generator, that will generate a random password based on user specified criteria. 
 
 Clicking the "Generate Password" button, will prompt the user with the following questions: 
 1. How many characters would you like your password to be? 
