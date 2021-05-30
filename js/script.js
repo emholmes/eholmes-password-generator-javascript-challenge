@@ -62,9 +62,7 @@ var confirmCharOptions = function() {
 // shuffle array before displaying on screen
 var shufflePassword = function(newPasswordArray) {
   //shuffling the newPasswordArray array
-  passwordLength = newPasswordArray.length - 1;
-
-  for(var i = passwordLength; i > 0; i--){
+  for(var i = newPasswordArray.length - 1; i > 0; i--){
     var j = Math.floor(Math.random() * i);
     var tempPasswordArray = newPasswordArray[i];
     newPasswordArray[i] = newPasswordArray[j];
@@ -142,7 +140,7 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password + "\n Characters: " + password.length;
+  passwordText.value = password;
 }
 
 // Add event listener to generate button
